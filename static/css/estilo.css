@@ -1,0 +1,16 @@
+img{
+    width: 200px;    
+}
+table tr td{
+    padding: 5px 20px;
+}
+h1{
+    background-color: #6610f2;
+}
+table tr th{
+    background-color: #6610f2;
+}
+.img2{
+    display: flex;
+    justify-content: center;
+}

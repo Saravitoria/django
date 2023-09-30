@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+    {% if alunos %}
+    
+    <table class="w-100 text-black">
+        <tr class="border p-1">
+            <th class="text-light">Ação</th>
+            <th class="text-light">Nome</th>
+            <th class="text-light">Email</th>>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td class="border p-1">
+                <a href="{% url 'aluno' id=aluno.id %}" class="btn btn-success btn-sm p-1">Visualizar</a>
+            </td>
+
+            <td class="border p-1">{{aluno.nome}}</td>
+            <td class="border p-1">{{aluno.email}}</td>
+        </tr>
+        {% endfor %} 
+
+    </table>
+    {% else %}
+
+    <p>Sem alunos para mostrar no momento</p>
+
+    {% endif %} 
+
+ {% endblock %} 
+
